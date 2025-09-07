@@ -1,0 +1,128 @@
+2025-09-07 16:19:28,617 - INFO - Configuration loaded successfully from config.json
+2025-09-07 16:19:28,617 - INFO - BPL-Extract starting...
+2025-09-07 16:19:28,617 - INFO - Starting news data extraction
+2025-09-07 16:19:28,617 - INFO - Attempting to fetch https://example.com/bengal-news (attempt 1/4)
+2025-09-07 16:19:28,620 - WARNING - Attempt 1 failed for https://example.com/bengal-news: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /bengal-news (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb18b30>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:28,620 - INFO - Retrying in 1 seconds...
+2025-09-07 16:19:29,620 - INFO - Attempting to fetch https://example.com/bengal-news (attempt 2/4)
+2025-09-07 16:19:29,623 - WARNING - Attempt 2 failed for https://example.com/bengal-news: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /bengal-news (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb193d0>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:29,623 - INFO - Retrying in 1 seconds...
+2025-09-07 16:19:30,623 - INFO - Attempting to fetch https://example.com/bengal-news (attempt 3/4)
+2025-09-07 16:19:30,626 - WARNING - Attempt 3 failed for https://example.com/bengal-news: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /bengal-news (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb19670>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:30,626 - INFO - Retrying in 1 seconds...
+2025-09-07 16:19:31,626 - INFO - Attempting to fetch https://example.com/bengal-news (attempt 4/4)
+2025-09-07 16:19:31,628 - WARNING - Attempt 4 failed for https://example.com/bengal-news: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /bengal-news (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb19910>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:31,628 - ERROR - All retry attempts failed for https://example.com/bengal-news
+2025-09-07 16:19:31,629 - INFO - Attempting to fetch https://example.com/political-updates (attempt 1/4)
+2025-09-07 16:19:31,630 - WARNING - Attempt 1 failed for https://example.com/political-updates: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /political-updates (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb199a0>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:31,630 - INFO - Retrying in 1 seconds...
+2025-09-07 16:19:32,631 - INFO - Attempting to fetch https://example.com/political-updates (attempt 2/4)
+2025-09-07 16:19:32,633 - WARNING - Attempt 2 failed for https://example.com/political-updates: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /political-updates (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb19eb0>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:32,633 - INFO - Retrying in 1 seconds...
+2025-09-07 16:19:33,633 - INFO - Attempting to fetch https://example.com/political-updates (attempt 3/4)
+2025-09-07 16:19:33,636 - WARNING - Attempt 3 failed for https://example.com/political-updates: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /political-updates (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb1a150>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:33,636 - INFO - Retrying in 1 seconds...
+2025-09-07 16:19:34,637 - INFO - Attempting to fetch https://example.com/political-updates (attempt 4/4)
+2025-09-07 16:19:34,639 - WARNING - Attempt 4 failed for https://example.com/political-updates: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /political-updates (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc78cb1a1e0>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:19:34,639 - ERROR - All retry attempts failed for https://example.com/political-updates
+2025-09-07 16:19:34,639 - INFO - Data saved successfully to ./data/bpl_extract_20250907_161934.json
+2025-09-07 16:19:34,640 - INFO - Backup created at ./data/backup/bpl_extract_20250907_161934.json
+2025-09-07 16:19:34,640 - INFO - BPL-Extract completed successfully
+2025-09-07 16:20:03,113 - INFO - Configuration loaded successfully from config.json
+2025-09-07 16:20:03,113 - INFO - BPL-Extract starting...
+2025-09-07 16:20:03,113 - INFO - Starting news data extraction
+2025-09-07 16:20:03,113 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 1/4)
+2025-09-07 16:20:03,116 - WARNING - Attempt 1 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d1e17350>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:03,116 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:04,116 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 2/4)
+2025-09-07 16:20:04,119 - WARNING - Attempt 2 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d1445070>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:04,119 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:05,119 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 3/4)
+2025-09-07 16:20:05,125 - WARNING - Attempt 3 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d1445310>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:05,125 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:06,125 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 4/4)
+2025-09-07 16:20:06,128 - WARNING - Attempt 4 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d14455b0>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:06,128 - ERROR - All retry attempts failed for https://httpbin.org/status/200
+2025-09-07 16:20:06,128 - INFO - Attempting to fetch https://httpbin.org/json (attempt 1/4)
+2025-09-07 16:20:06,130 - WARNING - Attempt 1 failed for https://httpbin.org/json: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d14459d0>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:06,130 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:07,130 - INFO - Attempting to fetch https://httpbin.org/json (attempt 2/4)
+2025-09-07 16:20:07,132 - WARNING - Attempt 2 failed for https://httpbin.org/json: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d1445af0>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:07,133 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:08,133 - INFO - Attempting to fetch https://httpbin.org/json (attempt 3/4)
+2025-09-07 16:20:08,135 - WARNING - Attempt 3 failed for https://httpbin.org/json: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d1445d90>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:08,135 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:09,135 - INFO - Attempting to fetch https://httpbin.org/json (attempt 4/4)
+2025-09-07 16:20:09,138 - WARNING - Attempt 4 failed for https://httpbin.org/json: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fc3d14463c0>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:09,138 - ERROR - All retry attempts failed for https://httpbin.org/json
+2025-09-07 16:20:09,138 - INFO - Data saved successfully to ./data/bpl_extract_20250907_162009.json
+2025-09-07 16:20:09,138 - INFO - Backup created at ./data/backup/bpl_extract_20250907_162009.json
+2025-09-07 16:20:09,139 - INFO - BPL-Extract completed successfully
+2025-09-07 16:20:16,536 - INFO - Configuration loaded successfully from /tmp/tmpuutozwgb/test_config.json
+2025-09-07 16:20:16,537 - ERROR - Configuration file nonexistent_config.json not found
+2025-09-07 16:20:16,537 - INFO - Configuration loaded successfully from /tmp/tmp342oyshc/test_config.json
+2025-09-07 16:20:16,537 - INFO - Data saved successfully to /tmp/tmp342oyshc/data/bpl_extract_20250907_162016.json
+2025-09-07 16:20:16,537 - INFO - Backup created at /tmp/tmp342oyshc/data/backup/bpl_extract_20250907_162016.json
+2025-09-07 16:20:16,539 - INFO - Configuration loaded successfully from /tmp/tmpctmqevie/test_config.json
+2025-09-07 16:20:16,539 - INFO - Attempting to fetch https://test.com (attempt 1/3)
+2025-09-07 16:20:16,546 - INFO - Configuration loaded successfully from /tmp/tmpbim609mv/test_config.json
+2025-09-07 16:20:16,546 - INFO - Attempting to fetch https://test.com (attempt 1/3)
+2025-09-07 16:20:16,546 - INFO - Successfully fetched https://test.com
+2025-09-07 16:20:16,547 - INFO - Configuration loaded successfully from config.json
+2025-09-07 16:20:16,547 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 1/4)
+2025-09-07 16:20:16,549 - WARNING - Attempt 1 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f64b32e2990>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:16,549 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:17,550 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 2/4)
+2025-09-07 16:20:17,552 - WARNING - Attempt 2 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f64b32e2ba0>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:17,553 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:18,553 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 3/4)
+2025-09-07 16:20:18,556 - WARNING - Attempt 3 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f64b32e2e40>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:18,556 - INFO - Retrying in 1 seconds...
+2025-09-07 16:20:19,556 - INFO - Attempting to fetch https://httpbin.org/status/200 (attempt 4/4)
+2025-09-07 16:20:19,559 - WARNING - Attempt 4 failed for https://httpbin.org/status/200: HTTPSConnectionPool(host='httpbin.org', port=443): Max retries exceeded with url: /status/200 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f64b3746270>: Failed to resolve 'httpbin.org' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:20:19,559 - ERROR - All retry attempts failed for https://httpbin.org/status/200
+2025-09-07 16:20:44,785 - INFO - Configuration loaded successfully from /tmp/tmpzjgckkhz/test_config.json
+2025-09-07 16:20:44,785 - ERROR - Configuration file nonexistent_config.json not found
+2025-09-07 16:20:44,786 - INFO - Configuration loaded successfully from /tmp/tmptgkoq_oh/test_config.json
+2025-09-07 16:20:44,786 - INFO - Data saved successfully to /tmp/tmptgkoq_oh/data/bpl_extract_20250907_162044.json
+2025-09-07 16:20:44,786 - INFO - Backup created at /tmp/tmptgkoq_oh/data/backup/bpl_extract_20250907_162044.json
+2025-09-07 16:20:44,787 - INFO - Configuration loaded successfully from /tmp/tmpbnm9ngjm/test_config.json
+2025-09-07 16:20:44,787 - INFO - Attempting to fetch https://test.com (attempt 1/3)
+2025-09-07 16:20:44,789 - INFO - Configuration loaded successfully from /tmp/tmpagpikbzt/test_config.json
+2025-09-07 16:20:44,789 - INFO - Attempting to fetch https://test.com (attempt 1/3)
+2025-09-07 16:20:44,789 - INFO - Successfully fetched https://test.com
+2025-09-07 16:21:19,451 - INFO - Configuration loaded successfully from /tmp/tmp4ph89jpe/test_config.json
+2025-09-07 16:21:19,451 - INFO - Attempting to fetch https://test.com (attempt 1/3)
+2025-09-07 16:21:19,451 - WARNING - Attempt 1 failed for https://test.com: Connection error
+2025-09-07 16:21:19,452 - INFO - Retrying in 0.1 seconds...
+2025-09-07 16:21:19,452 - INFO - Attempting to fetch https://test.com (attempt 2/3)
+2025-09-07 16:21:19,452 - INFO - Successfully fetched https://test.com
+2025-09-07 16:21:25,480 - INFO - Configuration loaded successfully from /tmp/tmptbodjlff/test_config.json
+2025-09-07 16:21:25,480 - ERROR - Configuration file nonexistent_config.json not found
+2025-09-07 16:21:25,481 - INFO - Configuration loaded successfully from /tmp/tmpgeuw39vx/test_config.json
+2025-09-07 16:21:25,481 - INFO - Data saved successfully to /tmp/tmpgeuw39vx/data/bpl_extract_20250907_162125.json
+2025-09-07 16:21:25,481 - INFO - Backup created at /tmp/tmpgeuw39vx/data/backup/bpl_extract_20250907_162125.json
+2025-09-07 16:21:25,482 - INFO - Configuration loaded successfully from /tmp/tmp3v5c1o6d/test_config.json
+2025-09-07 16:21:25,483 - INFO - Attempting to fetch https://test.com (attempt 1/3)
+2025-09-07 16:21:25,483 - WARNING - Attempt 1 failed for https://test.com: Connection error
+2025-09-07 16:21:25,483 - INFO - Retrying in 0.1 seconds...
+2025-09-07 16:21:25,483 - INFO - Attempting to fetch https://test.com (attempt 2/3)
+2025-09-07 16:21:25,483 - INFO - Successfully fetched https://test.com
+2025-09-07 16:21:25,484 - INFO - Configuration loaded successfully from /tmp/tmpgl8yzu_i/test_config.json
+2025-09-07 16:21:25,484 - INFO - Attempting to fetch https://test.com (attempt 1/3)
+2025-09-07 16:21:25,484 - INFO - Successfully fetched https://test.com
+2025-09-07 16:21:48,618 - INFO - Configuration loaded successfully from config.json
+2025-09-07 16:22:12,417 - INFO - Configuration loaded successfully from config.json
+2025-09-07 16:22:12,417 - INFO - Configuration loaded successfully from config.json
+2025-09-07 16:22:12,417 - INFO - Attempting to fetch https://example.com/test-endpoint (attempt 1/4)
+2025-09-07 16:22:12,420 - WARNING - Attempt 1 failed for https://example.com/test-endpoint: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /test-endpoint (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f22801da000>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:22:12,420 - INFO - Retrying in 1 seconds...
+2025-09-07 16:22:13,420 - INFO - Attempting to fetch https://example.com/test-endpoint (attempt 2/4)
+2025-09-07 16:22:13,423 - WARNING - Attempt 2 failed for https://example.com/test-endpoint: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /test-endpoint (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f22801da210>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:22:13,423 - INFO - Retrying in 1 seconds...
+2025-09-07 16:22:14,423 - INFO - Attempting to fetch https://example.com/test-endpoint (attempt 3/4)
+2025-09-07 16:22:14,426 - WARNING - Attempt 3 failed for https://example.com/test-endpoint: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /test-endpoint (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f22801da4b0>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:22:14,426 - INFO - Retrying in 1 seconds...
+2025-09-07 16:22:15,426 - INFO - Attempting to fetch https://example.com/test-endpoint (attempt 4/4)
+2025-09-07 16:22:15,428 - WARNING - Attempt 4 failed for https://example.com/test-endpoint: HTTPSConnectionPool(host='example.com', port=443): Max retries exceeded with url: /test-endpoint (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f22801da750>: Failed to resolve 'example.com' ([Errno -5] No address associated with hostname)"))
+2025-09-07 16:22:15,428 - ERROR - All retry attempts failed for https://example.com/test-endpoint

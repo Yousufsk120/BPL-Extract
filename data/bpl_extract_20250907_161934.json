@@ -1,0 +1,14 @@
+[
+  {
+    "source": "https://example.com/bengal-news",
+    "timestamp": "2025-09-07T16:19:31.628983",
+    "status": "failed",
+    "error": "All retry attempts failed"
+  },
+  {
+    "source": "https://example.com/political-updates",
+    "timestamp": "2025-09-07T16:19:34.639758",
+    "status": "failed",
+    "error": "All retry attempts failed"
+  }
+]
