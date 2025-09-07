@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengal Political Lab - Decoding the Future</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #ff6b6b);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #4ecdc4, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(255, 107, 107, 0.5)); }
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #4ecdc4;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tool-card i {
+            font-size: 3rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4ecdc4;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #4ecdc4;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .input-group input::placeholder,
+        .input-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .results {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border-left: 4px solid #4ecdc4;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .sentiment-indicator {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0.2rem;
+        }
+
+        .positive {
+            background: #4caf50;
+            color: white;
+        }
+
+        .negative {
+            background: #f44336;
+            color: white;
+        }
+
+        .neutral {
+            background: #ff9800;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .loading {
+            animation: pulse 1s infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            animation: float 8s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .chart-container {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            height: 300px;
+            position: relative;
+        }
+
+        .data-visualization {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Bengal Political Lab</div>
+            <ul class="nav-links">
+                <li><a href="#scraper">Web Scraper</a></li>
+                <li><a href="#sentiment">Sentiment Analysis</a></li>
+                <li><a href="#media">Media Extraction</a></li>
+                <li><a href="#social">Social Analysis</a></li>
+                <li><a href="#prediction">Future Model</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Decoding the Future</h1>
+            <p>Advanced Political Intelligence Platform for Bengal</p>
+            <a href="#tools" class="cta-button">Explore Tools</a>
+        </div>
+    </section>
+
+    <main class="main-content container" id="tools">
+        <!-- Web Scraper Section -->
+        <section class="section" id="scraper">
+            <h2><i class="fas fa-spider"></i> Web Scraper & Data Extraction</h2>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>URL Scraper</h3>
+                    <div class="input-group">
+                        <label>Target URL:</label>
+                        <input type="url" id="scrapeUrl" placeholder="https://example.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Scraping Mode:</label>
+                        <select id="scrapeMode">
+                            <option value="full">Full Page</option>
+                            <option value="headlines">Headlines Only</option>
+                            <option value="articles">Articles</option>
+                            <option value="meta">Meta Data</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="startScraping()">
+                        <i class="fas fa-play"></i> Start Scraping
+                    </button>
+                    <div class="progress-bar" id="scrapeProgress" style="display: none;">
+                        <div class="progress-fill" id="scrapeProgressFill"></div>
+                    </div>
+                    <div class="results" id="scrapeResults" style="display: none;"></div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>News Aggregator</h3>
+                    <div class="input-group">
+                        <label>Search Keywords:</label>
+                        <input type="text" id="newsKeywords" placeholder="Bengal politics, election, TMC, BJP">
+                    </div>
+                    <div class="input-group">
+                        <label>Date Range:</label>
+                        <input type="date" id="newsStartDate">
+                        <input type="date" id="newsEndDate">
+                    </div>
+                    <button class="btn" onclick="aggregateNews()">
+                        <i class="fas fa-search"></i> Aggregate News
+                    </button>
+                    <div class="results" id="newsResults" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sentiment Analysis Section -->
+        <section class="section" id="sentiment">
+            <h2><i class="fas fa-brain"></i> Political Sentiment Analysis</h2>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Text Sentiment Analyzer</h3>
+                    <div class="input-group">
+                        <label>Political Text:</label>
+                        <textarea id="sentimentText" rows="4" placeholder="Enter political statement, news article, or social media post..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Analysis Type:</label>
+                        <select id="analysisType">
+                            <option value="general">General Sentiment</option>
+                            <option value="political">Political Bias</option>
+                            <option value="emotion">Emotional Analysis</option>
+                            <option value="bengal">Bengal-Specific</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="analyzeSentiment()">
+                        <i class="fas fa-chart-line"></i> Analyze
+                    </button>
+                    <div class="results" id="sentimentResults" style="display: none;"></div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Sentiment Dashboard</h3>
+                    <div class="chart-container">
+                        <canvas id="sentimentChart" class="data-visualization"></canvas>
+                    </div>
+                    <button class="btn" onclick="generateSentimentReport()">
+                        <i class="fas fa-file-alt"></i> Generate Report
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Extraction Section -->
+        <section class="section" id="media">
+            <h2><i class="fas fa-images"></i> Media Data Extraction</h2>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Image Analyzer</h3>
+                    <div class="input-group">
+                        <label>Upload Image:</label>
+                        <input type="file" id="imageUpload" accept="image/*" onchange="processImage()">
+                    </div>
+                    <div class="input-group">
+                        <label>Analysis Focus:</label>
+                        <select id="imageAnalysisType">
+                            <option value="political">Political Figures</option>
+                            <option value="crowd">Crowd Analysis</option>
+                            <option value="text">Text Extraction</option>
+                            <option value="sentiment">Visual Sentiment</option>
+                        </select>
+                    </div>
+                    <div class="results" id="imageResults" style="display: none;"></div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Content Extractor</h3>
+                    <div class="input-group">
+                        <label>Video URL:</label>
+                        <input type="url" id="videoUrl" placeholder="YouTube, Facebook, Twitter video URL">
+                    </div>
+                    <div class="input-group">
+                        <label>Extract:</label>
+                        <select id="videoExtractType">
+                            <option value="audio">Audio/Speech</option>
+                            <option value="frames">Key Frames</option>
+                            <option value="metadata">Metadata</option>
+                            <option value="all">All Data</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="extractVideoData()">
+                        <i class="fas fa-download"></i> Extract
+                    </button>
+                    <div class="results" id="videoResults" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Analysis Section -->
+        <section class="section" id="social">
+            <h2><i class="fas fa-share-alt"></i> Social Media Intelligence</h2>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <i class="fab fa-twitter"></i>
+                    <h3>Twitter Analysis</h3>
+                    <div class="input-group">
+                        <label>Hashtag/Username:</label>
+                        <input type="text" id="twitterQuery" placeholder="#BengalPolitics or @username">
+                    </div>
+                    <div class="input-group">
+                        <label>Analysis Period:</label>
+                        <select id="twitterPeriod">
+                            <option value="1d">Last 24 Hours</option>
+                            <option value="7d">Last 7 Days</option>
+                            <option value="30d">Last 30 Days</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="analyzeTwitter()">
+                        <i class="fas fa-twitter"></i> Analyze
+                    </button>
+                    <div class="results" id="twitterResults" style="display: none;"></div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fab fa-facebook"></i>
+                    <h3>Facebook Insights</h3>
+                    <div class="input-group">
+                        <label>Page/Group URL:</label>
+                        <input type="url" id="facebookUrl" placeholder="Facebook page or group URL">
+                    </div>
+                    <div class="input-group">
+                        <label>Metrics:</label>
+                        <select id="facebookMetrics" multiple>
+                            <option value="engagement">Engagement Rate</option>
+                            <option value="sentiment">Post Sentiment</option>
+                            <option value="reach">Reach Analysis</option>
+                            <option value="demographics">Demographics</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="analyzeFacebook()">
+                        <i class="fab fa-facebook"></i> Analyze
+                    </button>
+                    <div class="results" id="facebookResults" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Prediction Model -->
+        <section class="section" id="prediction">
+            <h2><i class="fas fa-crystal-ball"></i> Decoding the Future Model</h2>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Election Predictor</h3>
+                    <div class="input-group">
+                        <label>Constituency:</label>
+                        <select id="constituency">
+                            <option value="">Select Constituency</option>
+                            <option value="kolkata-north">Kolkata North</option>
+                            <option value="kolkata-south">Kolkata South</option>
+                            <option value="howrah">Howrah</option>
+                            <option value="darjeeling">Darjeeling</option>
+                            <option value="all">All Bengal</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Data Sources:</label>
+                        <select id="dataSources" multiple>
+                            <option value="polls">Opinion Polls</option>
+                            <option value="social">Social Media</option>
+                            <option value="historical">Historical Data</option>
+                            <option value="demographic">Demographics</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="predictElection()">
+                        <i class="fas fa-magic"></i> Generate Prediction
+                    </button>
+                    <div class="chart-container" id="predictionChart" style="display: none;">
+                        <canvas id="electionChart" class="data-visualization"></canvas>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fas fa-trend-up"></i>
+                    <h3>Trend Forecasting</h3>
+                    <div class="input-group">
+                        <label>Political Issue:</label>
+                        <input type="text" id="politicalIssue" placeholder="e.g., Economic development, Healthcare">
+                    </div>
+                    <div class="input-group">
+                        <label>Forecast Period:</label>
+                        <select id="forecastPeriod">
+                            <option value="3m">3 Months</option>
+                            <option value="6m">6 Months</option>
+                            <option value="1y">1 Year</option>
+                            <option value="2y">2 Years</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="forecastTrend()">
+                        <i class="fas fa-chart-area"></i> Forecast
+                    </button>
+                    <div class="results" id="trendResults" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bengal Political Lab. Advanced Political Intelligence Platform.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let scrapingData = [];
+        let sentimentData = [];
+        let mediaData = [];
+        let socialData = [];
+
+        // Create floating particles
+        function createParticles() {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+                document.body.appendChild(particle);
+            }
+        }
+
+        // Initialize particles on page load
+        document.addEventListener('DOMContentLoaded', createParticles);
+
+        // Web Scraping Functions
+        function startScraping() {
+            const url = document.getElementById('scrapeUrl').value;
+            const mode = document.getElementById('scrapeMode').value;
+            
+            if (!url) {
+                alert('Please enter a valid URL');
+                return;
+            }
+
+            const progressBar = document.getElementById('scrapeProgress');
+            const progressFill = document.getElementById('scrapeProgressFill');
+            const results = document.getElementById('scrapeResults');
+            
+            progressBar.style.display = 'block';
+            results.style.display = 'none';
+            
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 20;
+                progressFill.style.width = Math.min(progress, 100) + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    simulateScrapingResults(url, mode);
+                }
+            }, 500);
+        }
+
+        function simulateScrapingResults(url, mode) {
+            const results = document.getElementById('scrapeResults');
+            const sampleData = {
+                full: ['Page Title: Sample Political News', 'Meta Description: Latest political developments', 'Word Count: 1,250', 'Images Found: 5', 'Links Extracted: 23'],
+                headlines: ['Breaking: Political Development in Bengal', 'Election Commission Announces New Dates', 'Party Leaders Meet for Alliance Talks'],
+                articles: ['Article 1: Economic Policy Changes', 'Article 2: Infrastructure Development Plans', 'Article 3: Social Welfare Initiatives'],
+                meta: ['Title: Political News Portal', 'Keywords: politics, bengal, election', 'Author: News Desk', 'Published: 2025-09-07']
+            };
+            
+            results.innerHTML = '<h4>Scraping Results:</h4>';
+            sampleData[mode].forEach(item => {
+                results.innerHTML += `<p><i class="fas fa-check-circle" style="color: #4ecdc4;"></i> ${item}</p>`;
+            });
+            results.style.display = 'block';
+        }
+
+        function aggregateNews() {
+            const keywords = document.getElementById('newsKeywords').value;
+            const startDate = document.getElementById('newsStartDate').value;
+            const endDate = document.getElementById('newsEndDate').value;
+            
+            const results = document.getElementById('newsResults');
+            results.innerHTML = '<h4>News Aggregation Results:</h4>';
+            results.innerHTML += '<p><i class="fas fa-newspaper"></i> Found 45 relevant articles</p>';
+            results.innerHTML += '<p><i class="fas fa-calendar"></i> Date Range: ' + (startDate || 'Last 30 days') + ' to ' + (endDate || 'Today') + '</p>';
+            results.innerHTML += '<p><i class="fas fa-tags"></i> Keywords: ' + (keywords || 'Bengal politics') + '</p>';
+            results.innerHTML += '<div style="margin-top: 1rem;"><strong>Top Headlines:</strong><br>';
+            results.innerHTML += '• Political Alliance Formation Discussions<br>';
+            results.innerHTML += '• Economic Development Plans Announced<br>';
+            results.innerHTML += '• Social Media Campaign Strategies<br>';
+            results.innerHTML += '• Public Opinion Survey Results</div>';
+            results.style.display = 'block';
+        }
+
+        // Sentiment Analysis Functions
+        function analyzeSentiment() {
+            const text = document.getElementById('sentimentText').value;
+            const type = document.getElementById('analysisType').value;
+            
+            if (!text.trim()) {
+                alert('Please enter text to analyze');
+                return;
+            }
+            
+            const results = document.getElementById('sentimentResults');
+            const sentiment = Math.random() > 0.5 ? 'positive' : Math.random() > 0.3 ? 'neutral' : 'negative';
+            const confidence = (Math.random() * 30 + 70).toFixed(1);
+            
+            results.innerHTML = '<h4>Sentiment Analysis Results:</h4>';
+            results.innerHTML += `<div class="sentiment-indicator ${sentiment}">Sentiment: ${sentiment.toUpperCase()}</div>`;
+            results.innerHTML += `<p><i class="fas fa-percentage"></i> Confidence: ${confidence}%</p>`;
+            results.innerHTML += `<p><i class="fas fa-brain"></i> Analysis Type: ${type}</p>`;
+            
+            if (type === 'political') {
+                results.innerHTML += '<p><i class="fas fa-balance-scale"></i> Political Leaning: Moderate</p>';
+            } else if (type === 'emotion') {
+                results.innerHTML += '<p><i class="fas fa-heart"></i> Primary Emotion: Hope (65%)</p>';
+            }
+            
+            results.style.display = 'block';
+        }
+
+        function generateSentimentReport() {
+            alert('Sentiment report generated! This would typically generate a downloadable PDF report with comprehensive analytics.');
+        }
+
+        // Media Processing Functions
+        function processImage() {
+            const file = document.getElementById('imageUpload').files[0];
+            const analysisType = document.getElementById('imageAnalysisType').value;
+            
+            if (!file) return;
+            
+            const results = document.getElementById('imageResults');
+            results.innerHTML = '<h4>Image Analysis Results:</h4>';
+            results.innerHTML += '<p><i class="fas fa-image"></i> Image processed successfully</p>';
+            
+            switch(analysisType) {
+                case 'political':
+                    results.innerHTML += '<p><i class="fas fa-user"></i> Political figures detected: 2</p>';
+                    results.innerHTML += '<p><i class="fas fa-flag"></i> Political symbols: Party flags, banners</p>';
+                    break;
+                case 'crowd':
+                    results.innerHTML += '<p><i class="fas fa-users"></i> Estimated crowd size: 1,500-2,000</p>';
+                    results.innerHTML += '<p><i class="fas fa-chart-bar"></i> Engagement level: High</p>';
+                    break;
+                case 'text':
+                    results.innerHTML += '<p><i class="fas fa-font"></i> Text extracted: "Vote for Change"</p>';
+                    results.innerHTML += '<p><i class="fas fa-language"></i> Language: Bengali, English</p>';
+                    break;
+                case 'sentiment':
+                    results.innerHTML += '<p><i class="fas fa-smile"></i> Visual sentiment: Positive (enthusiastic)</p>';
+                    results.innerHTML += '<p><i class="fas fa-palette"></i> Color analysis: Vibrant, energetic colors</p>';
+                    break;
+            }
+            
+            results.style.display = 'block';
+        }
+
+        function extractVideoData() {
+            const url = document.getElementById('videoUrl').value;
+            const extractType = document.getElementById('videoExtractType').value;
+            
+            if (!url) {
+                alert('Please enter a video URL');
+                return;
+            }
+            
+            const results = document.getElementById('videoResults');
+            results.innerHTML = '<h4>Video Extraction Results:</h4>';
+            results.innerHTML += `<p><i class="fas fa-link"></i> Source: ${url}</p>`;
+            
+            switch(extractType) {
+                case 'audio':
+                    results.innerHTML += '<p><i class="fas fa-volume-up"></i> Audio extracted and transcribed</p>';
+                    results.innerHTML += '<p><i class="fas fa-quote-left"></i> Key phrases: "development", "progress", "future"</p>';
+                    break;
+                case 'frames':
+                    results.innerHTML += '<p><i class="fas fa-film"></i> 15 key frames extracted</p>';
+                    results.innerHTML += '<p><i class="fas fa-clock"></i> Duration: 5:23 minutes</p>';
+                    break;
+                case 'metadata':
+                    results.innerHTML += '<p><i class="fas fa-info-circle"></i> Upload date: 2025-09-05</p>';
+                    results.innerHTML += '<p><i class="fas fa-eye"></i> Views: 12,456</p>';
+                    results.innerHTML += '<p><i class="fas fa-thumbs-up"></i> Likes: 523</p>';
+                    break;
+                case 'all':
+                    results.innerHTML += '<p><i class="fas fa-check-circle"></i> Complete extraction in progress...</p>';
+                    results.innerHTML += '<p><i class="fas fa-clock"></i> Estimated time: 2-3 minutes</p>';
+                    break;
+            }
+            
+            results.style.display = 'block';
+        }
+
+        // Social Media Analysis Functions
+        function analyzeTwitter() {
+            const query = document.getElementById('twitterQuery').value;
+            const period = document.getElementById('twitterPeriod').value;
+            
+            if (!query) {
+                alert('Please enter a hashtag or username');
+                return;
+            }
+            
+            const results = document.getElementById('twitterResults');
+            results.innerHTML = '<h4>Twitter Analysis Results:</h4>';
+            results.innerHTML += `<p><i class="fab fa-twitter"></i> Query: ${query}</p>`;
+            results.innerHTML += `<p><i class="fas fa-calendar"></i> Period: ${period}</p>`;
+            results.innerHTML += '<p><i class="fas fa-retweet"></i> Tweets analyzed: 2,567</p>';
+            results.innerHTML += '<p><i class="fas fa-heart"></i> Average engagement: 8.3%</p>';
+            results.innerHTML += '<div class="sentiment-indicator positive">Overall Sentiment: POSITIVE (68%)</div>';
+            results.innerHTML += '<p><i class="fas fa-trending-up"></i> Trending keywords: #development, #change, #future</p>';
+            results.style.display = 'block';
+        }
+
+        function analyzeFacebook() {
+            const url = document.getElementById('facebookUrl').value;
+            
+            if (!url) {
+                alert('Please enter a Facebook URL');
+                return;
+            }
+            
+            const results = document.getElementById('facebookResults');
+            results.innerHTML = '<h4>Facebook Analysis Results:</h4>';
+            results.innerHTML += `<p><i class="fab fa-facebook"></i> Source: ${url}</p>`;
+            results.innerHTML += '<p><i class="fas fa-users"></i> Page followers: 145,892</p>';
+            results.innerHTML += '<p><i class="fas fa-chart-line"></i> Engagement rate: 5.7%</p>';
+            results.innerHTML += '<p><i class="fas fa-comments"></i> Recent posts: 23 analyzed</p>';
+            results.innerHTML += '<div class="sentiment-indicator neutral">Overall Sentiment: NEUTRAL (52%)</div>';
+            results.innerHTML += '<p><i class="fas fa-globe"></i> Top demographics: Age 25-44, Urban Bengal</p>';
+            results.style.display = 'block';
+        }
+
+        // Prediction Functions
+        function predictElection() {
+            const constituency = document.getElementById('constituency').value;
+            
+            if (!constituency) {
+                alert('Please select a constituency');
+                return;
+            }
+            
+            const chart = document.getElementById('predictionChart');
+            chart.style.display = 'block';
+            
+            // Simple chart placeholder
+            const canvas = document.getElementById('electionChart');
+            const ctx = canvas.getContext('2d');
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            
+            ctx.fillStyle = '#4ecdc4';
+            ctx.fillRect(50, 50, 200, 50);
+            ctx.fillStyle = '#ff6b6b';
+            ctx.fillRect(50, 120, 150, 50);
+            ctx.fillStyle = '#ffd93d';
+            ctx.fillRect(50, 190, 100, 50);
+            
+            ctx.fillStyle = 'white';
+            ctx.font = '14px Arial';
+            ctx.fillText('Party A: 45%', 60, 80);
+            ctx.fillText('Party B: 35%', 60, 150);
+            ctx.fillText('Others: 20%', 60, 220);
+        }
+
+        function forecastTrend() {
+            const issue = document.getElementById('politicalIssue').value;
+            const period = document.getElementById('forecastPeriod').value;
+            
+            if (!issue) {
+                alert('Please enter a political issue');
+                return;
+            }
+            
+            const results = document.getElementById('trendResults');
+            results.innerHTML = '<h4>Trend Forecast Results:</h4>';
+            results.innerHTML += `<p><i class="fas fa-brain"></i> Issue: ${issue}</p>`;
+            results.innerHTML += `<p><i class="fas fa-calendar"></i> Forecast period: ${period}</p>`;
+            results.innerHTML += '<p><i class="fas fa-trending-up"></i> Predicted trend: Increasing importance (+23%)</p>';
+            results.innerHTML += '<p><i class="fas fa-users"></i> Public interest: Growing (85% confidence)</p>';
+            results.innerHTML += '<p><i class="fas fa-lightbulb"></i> Key factors: Economic impact, social media discussion</p>';
+            results.innerHTML += '<p><i class="fas fa-chart-line"></i> Recommendation: Monitor closely, prepare policy response</p>';
+            results.style.display = 'block';
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

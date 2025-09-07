@@ -1,0 +1,24 @@
+{
+  "name": "bpl-extract",
+  "version": "1.0.0",
+  "description": "Advanced Political Intelligence Platform for Bengal - Web scraping, sentiment analysis, media extraction, social media monitoring, and election prediction system with modern UI",
+  "main": "index.html",
+  "scripts": {
+    "dev": "serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "serve ."
+  },
+  "keywords": [
+    "political-analysis",
+    "bengal",
+    "sentiment-analysis",
+    "web-scraping",
+    "election-prediction",
+    "social-media-monitoring"
+  ],
+  "author": "Bengal Political Lab",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
