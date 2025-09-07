@@ -1,0 +1,27 @@
+{
+  "scraping": {
+    "max_retries": 3,
+    "retry_delay": 1,
+    "timeout": 10,
+    "user_agent": "BPL-Extract/1.0 Political Intelligence Bot"
+  },
+  "targets": {
+    "news_sources": [
+      "https://example.com/bengal-news",
+      "https://example.com/political-updates"
+    ],
+    "social_media": {
+      "twitter_keywords": ["bengal", "politics", "election"],
+      "hashtags": ["#BengalPolitics", "#Election2024"]
+    }
+  },
+  "analysis": {
+    "sentiment_threshold": 0.5,
+    "confidence_level": 0.8
+  },
+  "output": {
+    "format": "json",
+    "save_path": "./data/",
+    "backup_enabled": true
+  }
+}
