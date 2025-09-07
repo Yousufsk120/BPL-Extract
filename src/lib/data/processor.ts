@@ -26,7 +26,7 @@ export class BengalDataProcessor {
             reject(error);
           }
         },
-        error: (error) => reject(error)
+        error: (error: any) => reject(error)
       });
     });
   }

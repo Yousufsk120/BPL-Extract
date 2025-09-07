@@ -1,7 +1,7 @@
 // Party Vote Share Chart
 'use client';
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import { ElectionResult } from '@/types/political';
 import { BengalDataProcessor } from '@/lib/data/processor';
 
@@ -59,9 +59,13 @@ export default function PartyVoteShare({ results, title = "Party-wise Vote Share
           <Legend />
           <Bar 
             dataKey="share" 
-            fill={(entry: any) => getPartyColor(entry.party)}
+            fill="#8884d8"
             name="Vote Share (%)"
-          />
+          >
+            {voteShareData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={getPartyColor(entry.party)} />
+            ))}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
